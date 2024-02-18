@@ -1,0 +1,6 @@
+item_name = "class:product-title"
+item_quantity = "class:quantity"
+item_price = "css:app-cart > div > table > tbody > tr:first-of-type > td:nth-of-type(4) > span"
+item_price_total = "css:app-cart > div > table > tbody > tr:first-of-type > td:nth-of-type(5) > span"
+total_price = "css:app-cart > div > table > tfoot > tr > td:nth-of-type(5)"
+proceed_to_checkout = "css:app-cart > div > div > button"
