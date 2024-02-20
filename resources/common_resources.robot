@@ -1,10 +1,15 @@
 *** Settings ***
 Library    SeleniumLibrary
 Library    Collections
+Library    ../libs/BrowserManager.py
 Variables    ../locators/common_locators.py
+
+*** Variables ***
+# Available browsers: chrome, firefox, edge
+${browser}    chrome
 
 *** Keywords ***
 Open page
-     Open Browser    https://practicesoftwaretesting.com/  Chrome  executable_path = D:/Projects/Drivers/chromedriver.exe
-#     Set Selenium Implicit Wait    5
-
+    ${path}    download driver return path    ${browser}
+    Open Browser    https://practicesoftwaretesting.com/  ${browser}  executable_path = ${path}
+    Set Selenium Implicit Wait    5
